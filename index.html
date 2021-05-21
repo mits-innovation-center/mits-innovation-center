@@ -167,6 +167,9 @@ h2 {
 			<div class="tabs">
 				<ul>
 					<li data-li="leaderboard">LEADERBOARD</li>
+					<li class="active" data-li="organizer">ORGANIZER</li>
+					<li data-li="innovator">INNOVATOR</li>
+					<li data-li="programmer">PROGRAMMER</li>
 				</ul>
 			</div>
 		</div>
@@ -2253,7 +2256,57 @@ h2 {
 						0 points
 					</div>
 				</div>
+			
+			
+			
+			<div class="lboard_item organizer" style="display: block;">
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="pic_2.png" alt="picture_2">
+					</div>
+					<div class="name_bar">
+						<p><span>1.</span>Name</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 0%"></div>
+						</div>
+					</div>
+					<div class="points">
+						0 points
+					</div>
+				</div>
+				<div class="lboard_item innovator" style="display: none;">
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="pic_5.png" alt="picture_5">
+					</div>
+					<div class="name_bar">
+						<p><span>1.</span>Name</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 0%"></div>
+						</div>
+					</div>
+					<div class="points">
+						0 points
+					</div>
+				</div>
+				<div class="lboard_item programmer" style="display: none;">
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="pic_5.png" alt="picture_5">
+					</div>
+					<div class="name_bar">
+						<p><span>1.</span>Name</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 0%"></div>
+						</div>
+					</div>
+					<div class="points">
+						0 points
+					</div>
+				</div>
 				
+					
+					
 			</div>
 		</div>
 	</div>
@@ -2262,9 +2315,9 @@ h2 {
 
 <script>
 	var tabs = document.querySelectorAll(".lboard_tabs ul li");
-var today = document.querySelector(".today");
-var month = document.querySelector(".month");
-var year = document.querySelector(".year");
+var today = document.querySelector(".organizer");
+var month = document.querySelector(".innovator");
+var year = document.querySelector(".programmer");
 var items = document.querySelectorAll(".lboard_item");
 
 tabs.forEach(function(tab){
@@ -2281,10 +2334,10 @@ tabs.forEach(function(tab){
 			item.style.display = "none";
 		})
 
-		if(currenttab == "today"){
+		if(currenttab == "organizer"){
 			today.style.display = "block";
 		}
-		else if(currenttab == "month"){
+		else if(currenttab == "innovator"){
 			month.style.display = "block";
 		}
 		else{
